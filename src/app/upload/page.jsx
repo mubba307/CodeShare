@@ -31,3 +31,5 @@ const UploadPage = () => {
 };
 
 export default UploadPage;
+
+export const dynamic = 'force-dynamic';
