@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import UploadForm from '@/components/UploadForm';
 import Header from '@/components/Header';
@@ -21,7 +21,9 @@ const UploadPage = () => {
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-          <UploadForm />
+          <Suspense fallback={<div>Loading...</div>}>
+            <UploadForm />
+          </Suspense>
         </div>
       </div>
     </div>
